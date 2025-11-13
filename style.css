@@ -1,0 +1,97 @@
+/* ======== ESTILOS GERAIS ======== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======== CABEÇALHO ======== */
+header {
+  background-color: #e30613;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  border-bottom: 4px solid #9a1915;
+}
+
+/* ======== LOGO ======== */
+#logo {
+  height: 100px;
+  
+}
+
+/* ======== RELÓGIO ======== */
+#relogio {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #ffcc00;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(255, 255, 0, 0.5);
+}
+
+/* ======== CONTEÚDO PRINCIPAL ======== */
+main {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(136, 133, 133);
+}
+
+h2 {
+  color: #e30613;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, select, button {
+  padding: 8px;
+  margin: 5px 0 15px 0;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+/* ======== BOTÕES ======== */
+button {
+  background-color: #9a1915;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #c82333;
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* ======== ÁREA DE RESULTADOS ======== */
+.resultado {
+  background: #eef;
+  border: 1px solid #004080;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de Banco SENAI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="senaibanco.png" alt="Logo SENAI Banco Digital" id="logo">
+        <div id="relogio"></div>
+    </header>
+
+    <main>
+        <h2>Abertura de Conta</h2>
+        <label>Nome do Cliente:</label>
+        <input type="text" id="nome">
+
+        <label>Tipo de Conta:</label>
+        <select id="tipoConta">
+            <option value="corrente">Conta Corrente</option>
+            <option value="poupanca">Conta Poupança</option>
+        </select>
+
+        <button id="btnAbrir" onclick="abrirConta()">Abrir Conta</button>
+        <div class="resultado" id="resConta"></div>
+
+        <h2>Operações Bancárias</h2>
+        <button id="btnDepositar" onclick="depositar()" disabled>Depositar</button>
+        <button id="btnSacar" onclick="sacar()" disabled>Sacar</button>
+        <button id="btnSaldo" onclick="verSaldo()" disabled>Ver Saldo</button>
+        <button id="btnMov" onclick="listarMovimentos()" disabled>Listar Movimentações</button>
+        <button id="btnEncerrar" onclick="encerrarConta()" disabled>Encerrar Conta</button>
+
+        <div class="resultado" id="resOperacoes"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

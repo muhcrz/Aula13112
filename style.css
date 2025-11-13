@@ -52,7 +52,7 @@ header {
   box-shadow: 0 0 6px rgba(255, 255, 0, 0.5);
 }
 
-/* ======== CONTEÚDO PRINCIPAL ======== */
+/* CONTEÚDO PRINCIPAL */
 main {
   max-width: 700px;
   margin: 40px auto;
@@ -79,7 +79,7 @@ input, select, button {
   font-size: 15px;
 }
 
-/* ======== BOTÕES ======== */
+/* BOTÕES */
 button {
   background-color: #9a1915;
   color: white;
@@ -100,7 +100,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* ======== ÁREA DE RESULTADOS ======== */
+/* ÁREA DE RESULTADOS */
 .resultado {
   background: #eef;
   border: 1px solid #004080;
@@ -109,7 +109,7 @@ button:disabled {
   margin-top: 15px;
 }
 
-/* ======== NOTIFICAÇÃO DE DEPÓSITO ======== */
+/* NOTIFICAÇÃO DE DEPÓSITO */
 .notificacao {
   display: flex;
   flex-direction: column;

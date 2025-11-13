@@ -3,7 +3,7 @@ let movimentacoes = [];
 let dataUltimoDeposito = null;
 let valorPendenteDeposito = 0;
 
-/* ====== Relógio ====== */
+/* Relógio  */
 function atualizarRelogio() {
   const agora = new Date();
   const data = agora.toLocaleDateString('pt-BR');
@@ -13,7 +13,7 @@ function atualizarRelogio() {
 setInterval(atualizarRelogio, 1000);
 window.onload = atualizarRelogio;
 
-/* ====== Data formatada ====== */
+/*  Data formatada  */
 function obterDataHoraAtual() {
   const agora = new Date();
   const data = agora.toLocaleDateString('pt-BR');
@@ -21,7 +21,7 @@ function obterDataHoraAtual() {
   return `[${data} ${hora}]`;
 }
 
-/* ====== Abrir conta ====== */
+/*  Abrir conta  */
 function abrirConta() {
   const nome = document.getElementById("nome").value.trim();
   const tipo = document.getElementById("tipoConta").value;
@@ -45,7 +45,7 @@ function abrirConta() {
   habilitarOperacoes(true);
 }
 
-/* ====== Habilita botões ====== */
+/*  Habilita botões  */
 function habilitarOperacoes(estado) {
   document.getElementById("btnDepositar").disabled = !estado;
   document.getElementById("btnSacar").disabled = !estado;
@@ -54,7 +54,7 @@ function habilitarOperacoes(estado) {
   document.getElementById("btnEncerrar").disabled = !estado;
 }
 
-/* ====== Etapa 1: Mostrar aviso antes do depósito ====== */
+/* Etapa 1: Mostrar aviso antes do depósito */
 function mostrarAvisoDeposito() {
   if (!contaAtiva()) return;
 
@@ -75,7 +75,7 @@ function mostrarAvisoDeposito() {
   aviso.style.display = "flex";
 }
 
-/* ====== Etapa 2: Confirmar ou cancelar depósito ====== */
+/* Etapa 2: Confirmar ou cancelar depósito */
 function confirmarDeposito(confirmado) {
   const aviso = document.getElementById("avisoDeposito");
   aviso.style.display = "none";
@@ -99,7 +99,7 @@ function confirmarDeposito(confirmado) {
   valorPendenteDeposito = 0;
 }
 
-/* ====== Saque com juros ====== */
+/* Saque com juros */
 function sacar() {
   if (!contaAtiva()) return;
 
@@ -144,14 +144,14 @@ function sacar() {
     `<p>💸 Saque realizado! Saldo atual: <strong>R$ ${conta.saldo.toFixed(2)}</strong></p>`;
 }
 
-/* ====== Ver saldo ====== */
+/* Ver saldo */
 function verSaldo() {
   if (!contaAtiva()) return;
   document.getElementById("resOperacoes").innerHTML =
     `📊 Saldo atual: <strong>R$ ${conta.saldo.toFixed(2)}</strong>`;
 }
 
-/* ====== Movimentações ====== */
+/* Movimentações */
 function listarMovimentos() {
   if (!contaAtiva()) return;
   if (movimentacoes.length === 0) {
@@ -162,7 +162,7 @@ function listarMovimentos() {
   document.getElementById("resOperacoes").innerHTML = `<strong>📜 Movimentações:</strong><br>${lista}`;
 }
 
-/* ====== Encerrar conta ====== */
+/* Encerrar conta */
 function encerrarConta() {
   if (!contaAtiva()) return;
   const confirma = confirm("Tem certeza que deseja encerrar a conta?");
@@ -182,7 +182,7 @@ function encerrarConta() {
   }
 }
 
-/* ====== Verifica conta ====== */
+/* Verifica conta */
 function contaAtiva() {
   if (!conta || !conta.ativa) {
     alert("Nenhuma conta ativa! Abra uma nova conta primeiro.");

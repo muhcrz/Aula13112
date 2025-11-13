@@ -1,8 +1,5 @@
-/* ============================================================
-CÓDIGO JAVASCRIPT - SIMULADOR DE BANCO DIDÁTICO + RELÓGIO
-============================================================ */
 
-// Variáveis principais
+// Variáveis 
 let conta = null;
 let movimentacoes = [];
 

@@ -1,6 +1,6 @@
 /* ======== ESTILOS GERAIS ======== */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   background-color: #f3f3f3;
   margin: 0;
   padding: 0;
@@ -12,29 +12,42 @@ header {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
-  position: relative;
+  justify-content: space-between;
+  padding: 25px 60px;
   border-bottom: 4px solid #9a1915;
+  position: relative;
+  flex-wrap: wrap;
 }
 
-/* ======== LOGO ======== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 #logo {
-  height: 100px;
-  
+  height: 130px; /* LOGO MAIOR E HARMONIOSA */
+  transition: transform 0.3s ease;
+}
+
+#logo:hover {
+  transform: scale(1.05);
+}
+
+#titulo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 /* ======== RELÓGIO ======== */
 #relogio {
-  position: absolute;
-  top: 20px;
-  right: 30px;
   color: #ffcc00;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   font-family: monospace;
   background: rgba(0, 0, 0, 0.6);
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 8px;
   box-shadow: 0 0 6px rgba(255, 255, 0, 0.5);
 }
@@ -95,3 +108,30 @@ button:disabled {
   border-radius: 8px;
   margin-top: 15px;
 }
+
+/* ======== NOTIFICAÇÃO DE DEPÓSITO ======== */
+.notificacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffcc00;
+  border-radius: 10px;
+  background-color: #fffbea;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
+  animation: fadeIn 0.4s ease;
+}
+
+.notificacao p {
+  color: #5a4d00;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

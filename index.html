@@ -8,7 +8,10 @@
 </head>
 <body>
     <header>
-        <img src="senaibanco.png" alt="Logo SENAI Banco Digital" id="logo">
+        <div class="logo-container">
+            <img src="senaibanco.png" alt="Logo SENAI Banco Digital" id="logo">
+            <h1 id="titulo">Banco Digital SENAI</h1>
+        </div>
         <div id="relogio"></div>
     </header>
 
@@ -27,11 +30,18 @@
         <div class="resultado" id="resConta"></div>
 
         <h2>Operações Bancárias</h2>
-        <button id="btnDepositar" onclick="depositar()" disabled>Depositar</button>
+        <button id="btnDepositar" onclick="mostrarAvisoDeposito()" disabled>Depositar</button>
         <button id="btnSacar" onclick="sacar()" disabled>Sacar</button>
         <button id="btnSaldo" onclick="verSaldo()" disabled>Ver Saldo</button>
         <button id="btnMov" onclick="listarMovimentos()" disabled>Listar Movimentações</button>
         <button id="btnEncerrar" onclick="encerrarConta()" disabled>Encerrar Conta</button>
+
+        <!-- Notificação de confirmação de depósito -->
+        <div id="avisoDeposito" class="notificacao" style="display:none;">
+            <p id="textoAviso"></p>
+            <button onclick="confirmarDeposito(true)">Confirmar Depósito</button>
+            <button onclick="confirmarDeposito(false)">Cancelar</button>
+        </div>
 
         <div class="resultado" id="resOperacoes"></div>
     </main>
@@ -39,3 +49,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
